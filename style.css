@@ -257,11 +257,89 @@ body {
 .hero {
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 6rem 7% 4rem;
-    position: relative;
+    align-items: center;
+    padding: 0 10%;
+    background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
 }
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    margin-bottom: 2rem;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+}
+
+.hero-lead {
+    font-size: 1.25rem;
+    color: var(--text-muted); /* Assuming #a1a1b0 from previous steps */
+    max-width: 650px;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+/* Actions */
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 4rem;
+}
+
+.btn-main {
+    background: white;
+    color: black;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-main:hover { transform: scale(1.05); }
+
+/* Stack Mosaic */
+.stack-mosaic {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    opacity: 0.7;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.divider { color: var(--accent-1); opacity: 0.5; }
+
+.stack-item i { margin-right: 5px; color: white; }
 
 .badge {
     background: rgba(99, 102, 241, 0.12);
