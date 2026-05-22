@@ -5,7 +5,7 @@ A modern, animated portfolio website for a frontend developer specializing in Re
 
 ## 🔗 Live Demo
 
-[View Live Portfolio](#) *(Replace with your actual deployment URL)*
+[View Live Portfolio](/screencapture-kingfetson-github-io-Frontend-Developer-portfolio-2026-05-22-23_21_10.png)
 
 ## ✨ Features
 
